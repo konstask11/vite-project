@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#home">Esimerkkisivusto</a></li>
+      <li><a href="#news">Contacts</a></li>
+      <li style="float: right" class="logout"><a href="#">Logout</a></li>
+    </ul>
+
+    <!-- <div id="app"></div> -->
+
+    <div class="user">Hei kirjautunut käyttäjä: <span id="name">NIMI TÄHÄN</span>!</div>
+
+   
+        <!-- and so on... -->
+        <!-- Delete nappula poistaa käyttäjän-->
+        <!-- käytämme tässä apuna data-attribuutteja-->
+        <!-- # Delete user
+              DELETE http://127.0.0.1:3000/users/:id
+        -->
+      </tbody>
+    </table>
+
+    <div class="forms">
+      <div style="flex: 1">
+        <h3>List of users</h3>
+      
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>User Name</th>
+              <th>User Level</th>
+              <th>Info</th>
+              <th>Delete</th>
+              <th>ID</th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+            <!-- tänne haetaan kaikki käyttäjät -->
+            <!-- # Get all users -->
+            <!-- GET http://127.0.0.1:3000/api/users -->
+          </tbody>
+        </table>
+
+        <button class="get_users">Hae users tiedot</button>
+      </div>
+      <div style="flex: 1">
+        <h3>Userinfo changing panel</h3>
+
+        <form class="addform">
+          <!-- tänne formi -->
+          <form class="addform">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" placeholder="username"><br><br>
+  
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="password"><br><br>
+  
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="example@example.com"><br><br>
+  
+
+            <button type="button" id="putUserButton">Update user</button>
+
+          </div>
+          </form>
+        </div>
+      </div>
+        </form>
+      </div>
+    </div>
+
+    <dialog class="info_dialog">
+      <p>
+        <!-- tänne haetaan yksittäinen valittu käyttäjät -->      
+        <div>UserID: <span>Id</span></div>
+        <div>UserName: <span>Username</span></div>
+        <div>Email: <span>Email</span></div>
+        <div>Role: <span>Role</span></div> 
+      </p>
+      <button autofocus>Close</button>
+    </dialog>
+
+
+<h3>Submit sleeping hours</h3>
+<form id="sleepForm">
+    <label for="entry_date">Entry Date:</label>
+    <input type="date" id="entry_date" name="entry_date" required>
+    
+    <label for="mood">Mood:</label>
+    <input type="text" id="mood" name="mood" required>
+    
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" name="weight" step="0.01" required>
+    
+    <label for="sleep_hour">Sleep Hours:</label>
+    <input type="number" id="sleep_hour" name="sleep_hour" required>
+    
+    <label for="notes">Notes:</label>
+    <textarea id="notes" name="notes"></textarea>
+    
+    <button type="button" id="submit">Submit info</button>
+</form>
+
+
+    <h3>Shows diary entries</h3>
+
+    <table class="styled-table">
+      <thead>
+        <tr> 
+          <th>entry_id</th>
+          <th>entry_date</th>
+          <th>mood</th>
+          <th>weight</th>
+          <th>sleep_hours</th>
+          <th>notes</th> 
+          <th>created_at</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody class="tbody1">
+
+
+    <button class="get_entry">Show entries</button>
+
+
+    <footer> copyright kyllä </footer>
+  </body>
+  <script type="module" src="/home.js"></script>
+</html>
